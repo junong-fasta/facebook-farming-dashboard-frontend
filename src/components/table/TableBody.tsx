@@ -1,5 +1,6 @@
-import { TableBody, TableCell, TableRow } from '@material-ui/core'
 import React from 'react'
+import { uuid } from 'uuidv4'
+import { TableBody, TableCell, TableRow } from '@material-ui/core'
 import { Data, Order } from '../../interface'
 import { getComparator, stableSort } from '../../tools/helper'
 
@@ -14,7 +15,7 @@ function DashboardBody({ data, order, orderBy }: DashboardBodyProps) {
         <TableBody>
             {stableSort(data, getComparator(order, orderBy))
                 .map((row) => (
-                    <TableRow key={row.name} hover={true}>
+                    <TableRow key={uuid()} hover={true}>
                         <TableCell>{row.linkType}</TableCell>
                         <TableCell>{row.groupType}</TableCell>
                         <TableCell>{row.region}</TableCell>

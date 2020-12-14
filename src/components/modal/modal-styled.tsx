@@ -26,6 +26,44 @@ export const ViewContainer = styled.div`
     overflow: hidden;
 `
 
-export const DeviceListRoot = styled.div`
+export const DeviceContainer = styled.div`
     overflow: hidden;
+`
+
+export const DeviceItemRoot = styled.div`
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.5rem 1rem;
+    background-color: white;
+    &:nth-child(odd) {
+        background-color: #F1F1F1;
+    }
+`
+
+export const DeviceName = styled.p`
+    font-size: 1rem;
+    font-weight: 500;
+    margin: 0px;
+    width: 100px;
+`
+
+export const DeviceId = styled.p`
+    font-size: 0.8rem;
+    font-weight: 500;
+    color: darkgrey;
+    margin: 0px;
+`
+
+export const DeviceStatusRoot = styled.button<{ isJoined: boolean }>`
+    background-color: ${props => props.isJoined ? "blue" : "yellow"};
+    border: none;
+    color: white;
+    width: 80px;
+    height: 25px;
+    border-radius: 12.5px;
+    margin-right: 1rem;
+    &:focus {
+        outline: none;
+    }
 `

@@ -1,5 +1,6 @@
 import React from 'react'
-import { StyledGridContainer, ViewContainer } from '../../modal-styled'
+import { ViewContainer } from '../../modal-styled'
+import Devices from './devices'
 
 interface DevicesViewProps {
     index: number
@@ -11,13 +12,7 @@ function DevicesView(props: DevicesViewProps) {
     return (
         <ViewContainer>
             {index === value && (
-                <StyledGridContainer         
-                    container
-                    alignItems="flex-start"
-                    spacing={1}
-                >
-                    Gogogoggo
-                </StyledGridContainer>
+                <Devices />
             )}
         </ViewContainer>
     )
